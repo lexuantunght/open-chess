@@ -1,0 +1,61 @@
+{
+  "name": "open-chess",
+  "version": "1.0.0",
+  "description": "A lightly chess game",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "mpp dev --entry ./src/index.tsx",
+    "build": "mpp build --entry ./src/index.tsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexuantunght/open-chess.git"
+  },
+  "keywords": [
+    "3d",
+    "Typescript",
+    "Javascript"
+  ],
+  "author": "Tung Le",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lexuantunght/open-chess/issues"
+  },
+  "homepage": "https://github.com/lexuantunght/open-chess#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.195",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "mpp-cli": "^1.2.1"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "formik": "^2.4.2",
+    "framer-motion": "^10.12.17",
+    "immer": "^10.0.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "quick-lru": "^6.1.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "redux": "^4.2.1",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.8.0",
+    "yup": "^1.2.0"
+  }
+}
