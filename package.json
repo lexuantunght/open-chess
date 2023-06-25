@@ -5,15 +5,19 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "mpp dev --entry ./src/index.tsx",
-    "build": "mpp build --entry ./src/index.tsx"
+    "icon": "gulp -f gulpfile.js iconfont --i ./src/static/svg-icons --o ./src/static/dist",
+    "dev:renderer": "cross-env NODE_ENV=development PORT=5173 webpack-dev-server",
+    "dev:main": "cross-env NODE_ENV=development PORT=5173 electron main/index.js",
+	"dev:web": "cross-env NODE_ENV=development PORT=3001 PLATFORM=web webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack",
+    "dist": "cross-env NODE_ENV=production electron-builder --config electron-builder.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lexuantunght/open-chess.git"
   },
   "keywords": [
-    "3d",
+    "Chess",
     "Typescript",
     "Javascript"
   ],
@@ -35,16 +39,9 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@types/lodash": "^4.14.195",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^17.0.2",
-    "@typescript-eslint/eslint-plugin": "^5.55.0",
-    "@typescript-eslint/parser": "^5.55.0",
-    "mpp-cli": "^1.2.1"
-  },
   "dependencies": {
     "clsx": "^1.2.1",
+    "electron": "22.3.14",
     "formik": "^2.4.2",
     "framer-motion": "^10.12.17",
     "immer": "^10.0.2",
@@ -57,5 +54,55 @@
     "reflect-metadata": "^0.1.13",
     "tsyringe": "^4.8.0",
     "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.17.8",
+    "@babel/node": "7.16.8",
+    "@babel/plugin-proposal-class-properties": "7.16.7",
+    "@babel/plugin-transform-runtime": "7.18.6",
+    "@babel/preset-env": "7.16.11",
+    "@babel/preset-react": "7.16.7",
+    "@babel/preset-typescript": "7.16.7",
+    "@babel/runtime": "7.18.6",
+    "@svgr/webpack": "6.5.1",
+    "@types/lodash": "^4.14.195",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "autoprefixer": "10.4.14",
+    "babel-loader": "8.2.5",
+    "babel-plugin-transform-typescript-metadata": "^0.3.2",
+    "circular-dependency-plugin": "^5.2.2",
+    "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "3.4.1",
+    "electron-builder": "^24.4.0",
+    "eslint": "^8.36.0",
+    "eslint-plugin-react": "^7.32.2",
+    "file-loader": "^6.2.0",
+    "gulp": "4.0.2",
+    "gulp-consolidate": "0.2.0",
+    "gulp-iconfont": "11.0.1",
+    "html-webpack-plugin": "^5.5.1",
+    "mini-css-extract-plugin": "^2.7.5",
+    "optimist": "^0.6.1",
+    "postcss": "8.4.24",
+    "postcss-loader": "6.2.1",
+    "rimraf": "3.0.2",
+    "sass": "^1.63.6",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "tailwindcss": "3.3.2",
+    "terser-webpack-plugin": "^5.3.7",
+    "ts-loader": "^9.4.2",
+    "ttypescript": "^1.5.15",
+    "typescript": "^4.9.3",
+    "typescript-transform-paths": "3.4.6",
+    "webpack": "^5.79.0",
+    "webpack-bundle-analyzer": "^4.8.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.3"
   }
 }

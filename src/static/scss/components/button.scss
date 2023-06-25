@@ -1,0 +1,18 @@
+.x-button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	&.--sm {
+		min-height: 24px;
+	}
+	&.--md {
+		min-height: 32px;
+	}
+	&.--lg {
+		min-height: 40px;
+	}
+	&.--transparent {
+		background-color: transparent;
+	}
+}

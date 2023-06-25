@@ -1,0 +1,6 @@
+@for $i from 1 through 5 {
+	$val: 100 * $i;
+	.bg-slate-#{$val} {
+		background-color: var(--slate-#{$val});
+	}
+}

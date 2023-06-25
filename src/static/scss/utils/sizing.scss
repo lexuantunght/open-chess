@@ -1,0 +1,45 @@
+@for $i from 0 through 80 {
+	$val: 0.25rem * $i;
+	.h-#{$i} {
+		height: $val;
+	}
+	.w-#{$i} {
+		width: $val;
+	}
+	.max-h-#{$i} {
+		max-height: $val;
+	}
+	.max-w-#{$i} {
+		max-width: $val;
+	}
+	.min-h-#{$i} {
+		min-height: $val;
+	}
+	.min-w-#{$i} {
+		min-width: $val;
+	}
+}
+.w-full {
+	width: 100%;
+}
+.w-screen {
+	width: 100vw;
+}
+.h-full {
+	height: 100%;
+}
+.h-screen {
+	height: 100vh;
+}
+.h-fit {
+	height: fit-content;
+}
+.w-fit {
+	width: fit-content;
+}
+.h-max {
+	height: max-content;
+}
+.w-max {
+	width: max-content;
+}

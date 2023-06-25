@@ -1,0 +1,27 @@
+.x-titlebar {
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-app-region: drag;
+	position: relative;
+	height: 24px;
+	width: 100%;
+	&-control {
+		-webkit-app-region: no-drag;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: fit-content;
+		display: grid;
+		grid-template-columns: repeat(3, 45px);
+	}
+	&-name {
+		height: 100%;
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
