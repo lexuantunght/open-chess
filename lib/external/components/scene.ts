@@ -1,5 +1,6 @@
 import { Node, NodeType } from './node';
-import TextureCache from '../../core/texture-cache';
+import ModelCache from '../../core/model-cache';
+import DrawManager from '../../core/draw-manager';
 
 export class Scene extends Node {
 	constructor() {
@@ -9,6 +10,7 @@ export class Scene extends Node {
 
 	cleanUp() {
 		this.removeAllChilds();
-		TextureCache.getInstance().cleanUp();
+		ModelCache.getInstance().cleanUp();
+		DrawManager.getInstance().cleanUp();
 	}
 }

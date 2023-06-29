@@ -13,6 +13,6 @@ export type Texture = {
 };
 
 export type Model3D = {
-	geometries: any[];
-	materialLibs: any[];
+	geometries: unknown[];
+	materialLibs: unknown[];
 };

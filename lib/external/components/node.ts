@@ -1,3 +1,5 @@
+import { Model3D } from '../../engine/types';
+import DrawManager from '../../core/draw-manager';
 import ClientId from '../../utils/client-id';
 
 export class Node {
@@ -35,16 +37,31 @@ export class Node {
 		return result;
 	}
 
+	getModel(): Model3D | null {
+		return null;
+	}
+
 	addChild(node: Node) {
+		if (node.getType() === NodeType.DRAWABLE) {
+			DrawManager.getInstance().addObject(node.getId(), node);
+		}
 		this.children.set(node.getId(), node);
 	}
 
 	removeChild(id: number) {
+		DrawManager.getInstance().removeObject(id);
 		this.children.delete(id);
 	}
 
 	removeAllChilds() {
+		this.children.forEach((child) => {
+			DrawManager.getInstance().removeObject(child.getId());
+		});
 		this.children.clear();
+	}
+
+	getType() {
+		return this.type;
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars

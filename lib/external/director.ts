@@ -1,5 +1,6 @@
 import { Scene } from './components/scene';
 import { Game } from './game';
+import { WebGLCoreEvents } from '../core/webgl';
 
 export class Director {
 	private static instance: Director | null = null;
@@ -19,11 +20,15 @@ export class Director {
 
 	runScene(scene: Scene) {
 		if (this.currentScene) {
-			this.currentGame?.getEngine().removeListener('UPDATE', this.currentScene.update);
+			this.currentGame
+				?.getEngine()
+				.renderer.removeListener(WebGLCoreEvents.UPDATE, this.currentScene.update);
 			this.currentScene.cleanUp();
 		}
 		this.currentScene = scene;
-		this.currentGame?.getEngine().addListener('UPDATE', this.currentScene.update);
+		this.currentGame
+			?.getEngine()
+			.renderer.addListener(WebGLCoreEvents.UPDATE, this.currentScene.update);
 	}
 
 	getCurrentScene() {

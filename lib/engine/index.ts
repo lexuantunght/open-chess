@@ -1,11 +1,9 @@
 import WebGLCore from '../core/webgl';
-import EventModel from '../utils/event-model';
-import { EngineEventMap, Model3D } from './types';
+import { Model3D } from './types';
 
-class Engine extends EventModel<EngineEventMap> {
-	private renderer: WebGLCore;
+class Engine {
+	renderer: WebGLCore;
 	constructor(canvas?: HTMLCanvasElement | null) {
-		super();
 		this.renderer = new WebGLCore(canvas);
 	}
 
