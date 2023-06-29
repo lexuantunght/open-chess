@@ -18,7 +18,7 @@ const TitleBar = () => {
 
 	return (
 		<div className="x-titlebar bg-slate-100">
-			<span className="x-titlebar-name text-xs font-semibold">Open Chess</span>
+			<span className="x-titlebar-name text-xs font-semibold">Open WebGL</span>
 			{application.__PLATFORM__ === 'win32' && (
 				<div className="x-titlebar-control">
 					<Button
@@ -34,7 +34,7 @@ const TitleBar = () => {
 							className="w-full flex items-center justify-center hover:bg-slate-200"
 							color="transparent"
 							size="sm">
-							<i className="x-icon icon-Unmaximize_24_Line text-base" />
+							<i className="x-icon icon-Unmaximize_24_Line text-sm" />
 						</Button>
 					) : (
 						<Button
@@ -42,7 +42,7 @@ const TitleBar = () => {
 							className="w-full flex items-center justify-center hover:bg-slate-200"
 							color="transparent"
 							size="sm">
-							<i className="x-icon icon-Maximize_24_Line text-base" />
+							<i className="x-icon icon-Maximize_24_Line text-sm" />
 						</Button>
 					)}
 					<Button
@@ -50,7 +50,7 @@ const TitleBar = () => {
 						color="transparent"
 						onClick={() => application.windowAPI.close()}
 						size="sm">
-						<i className="x-icon icon-Close_24_Line text-xl" />
+						<i className="x-icon icon-Close_24_Line text-lg" />
 					</Button>
 				</div>
 			)}

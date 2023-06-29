@@ -8,9 +8,11 @@ const __DEV__ = process.env.NODE_ENV === 'development';
 class WindowManagerMain {
 	constructor() {
 		this.windowOptions = {
-			width: 512,
-			height: 320,
-			title: 'Open Chess',
+			width: 960,
+			minWidth: 400,
+			height: 640,
+			minHeight: 500,
+			title: 'Open WebGL',
 			icon: __DEV__
 				? path.join(__dirname, '/../public/favicon.ico')
 				: path.join(__dirname, `/../build/favicon.ico`),
@@ -23,8 +25,8 @@ class WindowManagerMain {
 				partition: 'persist:app',
 				preload: path.join(__dirname, 'preload.js'),
 			},
-			maximizable: false,
-			resizable: false,
+			maximizable: true,
+			resizable: true,
 			show: false,
 			frame: false,
 		};
