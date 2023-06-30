@@ -12,7 +12,7 @@ class WindowManagerMain {
 			minWidth: 400,
 			height: 640,
 			minHeight: 500,
-			title: 'Open WebGL',
+			title: 'Open Scene Viewer',
 			icon: __DEV__
 				? path.join(__dirname, '/../public/favicon.ico')
 				: path.join(__dirname, `/../build/favicon.ico`),

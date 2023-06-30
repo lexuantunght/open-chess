@@ -1,7 +1,7 @@
 import { Sprite } from './sprite';
 
 export class Animation extends Sprite {
-	constructor() {
-		super();
+	constructor(url: string) {
+		super(url);
 	}
 }

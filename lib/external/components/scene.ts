@@ -8,6 +8,10 @@ export class Scene extends Node {
 		this.type = NodeType.SCENE;
 	}
 
+	onLoad() {
+		//
+	}
+
 	cleanUp() {
 		this.removeAllChilds();
 		ModelCache.getInstance().cleanUp();

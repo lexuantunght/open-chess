@@ -12,6 +12,9 @@ body {
 }
 
 .app-main {
-	height: calc(100% - 24px);
+	height: 100%;
+	&.--title-bar {
+		height: calc(100% - 24px);
+	}
 	overflow: hidden;
 }

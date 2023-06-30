@@ -25,6 +25,7 @@ export class Director {
 				.renderer.removeListener(WebGLCoreEvents.UPDATE, this.currentScene.update);
 			this.currentScene.cleanUp();
 		}
+		scene.onLoad();
 		this.currentScene = scene;
 		this.currentGame
 			?.getEngine()

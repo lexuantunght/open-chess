@@ -18,7 +18,7 @@ const TitleBar = () => {
 
 	return (
 		<div className="x-titlebar bg-slate-100">
-			<span className="x-titlebar-name text-xs font-semibold">Open WebGL</span>
+			<span className="x-titlebar-name text-xs font-semibold">Open Scene Viewer</span>
 			{application.__PLATFORM__ === 'win32' && (
 				<div className="x-titlebar-control">
 					<Button
